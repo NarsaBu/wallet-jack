@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AccountCellView: View {
     
     let account: Account
+    @Query private var transactions: [Transaction]
     
     var body: some View {
         VStack {
@@ -28,7 +30,7 @@ struct AccountCellView: View {
                     .fontWeight(.light)
                     .font(.system(size: 26))
                 Spacer()
-                Text("\u{20BD} \(String(format: "%.2f", account.assets))")
+                Text("\u{20BD} \(String(format: "%.2f", countAssets()))")
                     .fontWeight(.semibold)
                     .font(.system(size: 26))
                     .foregroundStyle(.green)
@@ -39,7 +41,7 @@ struct AccountCellView: View {
                     .fontWeight(.light)
                     .font(.system(size: 26))
                 Spacer()
-                Text("\u{20BD} -\(String(format: "%.2f", account.liabilities))")
+                Text("\u{20BD} -\(String(format: "%.2f", countLiabilities()))")
                     .fontWeight(.semibold)
                     .font(.system(size: 26))
                     .foregroundStyle(.red)
@@ -50,7 +52,7 @@ struct AccountCellView: View {
                     .fontWeight(.light)
                     .font(.system(size: 26))
                 Spacer()
-                Text("\u{20BD} \(String(format: "%.2f", account.total))")
+                Text("\u{20BD} \(String(format: "%.2f", countTotal()))")
                     .fontWeight(.semibold)
                     .font(.system(size: 26))
                     .foregroundStyle(.gray)
@@ -58,9 +60,28 @@ struct AccountCellView: View {
             .padding(.top)
         }
     }
+    
+    private func countAssets() -> Double {
+        return transactions
+            .filter({ $0.account!.id == account.id })
+            .filter({ $0.transactionType == "income" })
+            .map({ $0.amount })
+            .reduce(0, +)
+    }
+    
+    private func countLiabilities() -> Double {
+        return transactions
+            .filter({ $0.transactionType == "expense" })
+            .map({ $0.amount })
+            .reduce(0, +)
+    }
+    
+    private func countTotal() -> Double {
+        return countAssets() - countLiabilities()
+    }
 }
 
 #Preview {
     
-    AccountCellView(account: Account(name: "account1", assets: 1234.0, liabilities: 234.0, total: 1000.0))
+    AccountCellView(account: Account(name: "account1"))
 }

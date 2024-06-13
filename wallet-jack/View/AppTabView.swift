@@ -16,6 +16,11 @@ struct AppTabView: View {
                     Image(systemName: "list.bullet.rectangle")
                     Text("\(Date().getCurrentMonth())/\(Date().getCurrentDay())")
                 }
+            CalendarView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Calendar")
+                }
             StatisticView()
                 .tabItem {
                     Image(systemName: "chart.bar.xaxis")

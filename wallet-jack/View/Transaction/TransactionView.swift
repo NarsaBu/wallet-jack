@@ -10,10 +10,7 @@ import SwiftData
 
 struct TransactionView: View {
     
-    @State private var selectedYear: Int = Date().getCurrentYear()
-    @State private var selectedMonthNumber: Int = Date().getCurrentMonth()
-    @State private var selectedMonth: Month = Date().getCurrentMonthEnum()
-    @State private var selectedPeriod: PeriodSelector = .DAILY
+    @State private var selectedDate: Date = Date.now
     
     @Query(filter: #Predicate<IncomeExpenseCategory> { ieCategory in
         ieCategory.type == "expense"
@@ -27,8 +24,8 @@ struct TransactionView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 buildYearSelector()
-                buildPeriodSelector()
-                ZStack {
+                ZStack(alignment: .bottomTrailing) {
+                    DailyTransactiionView(selectedDate: Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: selectedDate)!)
                     NavigationLink(destination: AddNewTransactionView(expenses: expenses, incomes: incomes, accounts: accounts)) {
                         Image(systemName: "plus")
                             .frame(width: 60, height: 60)
@@ -37,6 +34,7 @@ struct TransactionView: View {
                             .clipShape(Circle())
                             .shadow(color: .black.opacity(0.5), radius: 10)
                     }
+                    .padding()
                 }
                 Spacer()
             }
@@ -45,25 +43,6 @@ struct TransactionView: View {
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(.pink, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button(action: {
-                        //TODO: add find
-                    }, label: {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.white)
-                    })
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        //TODO: add sort
-                    }, label: {
-                        Image(systemName: "line.3.horizontal.decrease")
-                            .foregroundColor(.white)
-                    })
-                }
-            }
         }
     }
     
@@ -77,7 +56,7 @@ struct TransactionView: View {
                     .foregroundColor(.white)
             })
             Spacer()
-            Text("\(selectedMonth) \(selectedYear)")
+            Text(selectedDate, format: .dateTime.day().month().year())
                 .font(.title3)
                 .foregroundColor(.white)
             Spacer()
@@ -93,41 +72,12 @@ struct TransactionView: View {
         .colorScheme(.dark)
     }
     
-    @ViewBuilder
-    private func buildPeriodSelector() -> some View {
-        Picker("", selection: $selectedPeriod) {
-            ForEach(PeriodSelector.allCases) { period in
-                Text(period.rawValue)
-                    .font(.largeTitle)
-                    .background(Color.pink)
-            }
-        }
-        .pickerStyle(.segmented)
-        .background(Color.pink)
-        .colorScheme(.dark)
-        .colorMultiply(.white)
-    }
-    
     private func incrementSelectedYear() {
-        if selectedMonthNumber == 12 {
-            selectedMonthNumber = 1
-            selectedYear += 1
-        } else {
-            selectedMonthNumber += 1
-        }
-        
-        selectedMonth = Month(rawValue: "\(selectedMonthNumber)")!
+        selectedDate = Calendar.current.date(byAdding: .day, value: 1, to: selectedDate)!
     }
     
     private func decrementSelectedYear() {
-        if selectedMonthNumber == 1 {
-            selectedMonthNumber = 12
-            selectedYear -= 1
-        } else {
-            selectedMonthNumber -= 1
-        }
-        
-        selectedMonth = Month(rawValue: "\(selectedMonthNumber)")!
+        selectedDate = Calendar.current.date(byAdding: .day, value: -1, to: selectedDate)!
     }
 }
 

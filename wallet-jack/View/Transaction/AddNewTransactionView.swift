@@ -29,7 +29,7 @@ struct AddNewTransactionView: View {
         self.incomes = incomes
         self.accounts = accounts
         _selectedCategory = State(initialValue: self.expenses.first ?? IncomeExpenseCategory(name: "select category", type: "expense", budget: 0.0))
-        _selectedAccount = State(initialValue: self.accounts.first ?? Account(name: "select account", assets: 0.0, liabilities: 0.0, total: 0.0))
+        _selectedAccount = State(initialValue: self.accounts.first ?? Account(name: "select account"))
     }
     
     var body: some View {
@@ -45,7 +45,7 @@ struct AddNewTransactionView: View {
                     .datePickerStyle(.graphical)
                 TextField("Amount", value: $amount, formatter: NumberFormatter())
                 TextField("Note", text: $note)
-                TextField("Desctiption", text: $desc)
+                TextField("Description", text: $desc)
                 buildCategoryPicker()
                 buildAccountPicker()
             }

@@ -12,16 +12,10 @@ import SwiftData
 final class Account {
     var id: UUID
     var name: String
-    var assets: Double
-    var liabilities: Double
-    var total: Double
     @Relationship(deleteRule: .cascade) var transactions = [Transaction]()
     
-    init(name: String, assets: Double, liabilities: Double, total: Double) {
+    init(name: String) {
         self.id = UUID()
         self.name = name
-        self.assets = assets
-        self.liabilities = liabilities
-        self.total = total
     }
 }

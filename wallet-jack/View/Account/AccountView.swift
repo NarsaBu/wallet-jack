@@ -14,6 +14,7 @@ struct AccountView: View {
     @State private var isShowingPlusNavigationLink = false
     
     @Query var accounts: [Account]
+    @Query var transactions: [Transaction]
     
     var body: some View {
         NavigationStack {

@@ -31,7 +31,7 @@ struct AddNewAccountView: View {
                 
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button("Save") {
-                        let account = Account(name: name, assets: 0.0, liabilities: 0.0, total: 0.0)
+                        let account = Account(name: name)
 
                         context.insert(account)
                         

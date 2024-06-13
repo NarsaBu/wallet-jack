@@ -15,19 +15,26 @@
 		0C43CE412BFE2B7000EFB207 /* IncomeExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43CE402BFE2B7000EFB207 /* IncomeExpenseCategory.swift */; };
 		0C43CE452BFE2C8C00EFB207 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43CE442BFE2C8C00EFB207 /* Account.swift */; };
 		0C43CE492BFE2D7700EFB207 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43CE482BFE2D7700EFB207 /* Category.swift */; };
+		0C77EA942C1B50A5008D97D6 /* TransactionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C77EA932C1B50A5008D97D6 /* TransactionCellView.swift */; };
 		0C7A3ADC2BFFB5A50015E72B /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A3ADB2BFFB5A50015E72B /* CategoriesView.swift */; };
 		0C7A3ADE2BFFB80D0015E72B /* CategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A3ADD2BFFB80D0015E72B /* CategoryCellView.swift */; };
 		0C7A3AE02BFFC1520015E72B /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A3ADF2BFFC1520015E72B /* AddCategoryView.swift */; };
 		0C7A3AE22BFFC8B10015E72B /* EditCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A3AE12BFFC8B10015E72B /* EditCategoryView.swift */; };
 		0CD222802C09E48900A0CF0E /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2227F2C09E48900A0CF0E /* Month.swift */; };
 		0CD222822C09EDA700A0CF0E /* AddNewTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD222812C09EDA700A0CF0E /* AddNewTransactionView.swift */; };
+		0CD222842C0A057A00A0CF0E /* DailyTransactiionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD222832C0A057A00A0CF0E /* DailyTransactiionView.swift */; };
+		0CE3CD4D2C1B6F7A008D76E8 /* EditTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3CD4C2C1B6F7A008D76E8 /* EditTransactionView.swift */; };
+		0CE3CD502C1B799F008D76E8 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3CD4F2C1B799F008D76E8 /* CalendarView.swift */; };
+		0CE3CD522C1B79BF008D76E8 /* CalendarTransactionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3CD512C1B79BF008D76E8 /* CalendarTransactionItemView.swift */; };
+		0CE3CD542C1B7B46008D76E8 /* CalendarTransactionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3CD532C1B7B46008D76E8 /* CalendarTransactionCellView.swift */; };
+		0CE3CD562C1B7BFB008D76E8 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3CD552C1B7BFB008D76E8 /* ViewExtension.swift */; };
+		0CE3CD592C1B8CAC008D76E8 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3CD582C1B8CAC008D76E8 /* ChartModel.swift */; };
+		0CE3CD5B2C1B8E2B008D76E8 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3CD5A2C1B8E2B008D76E8 /* StatisticView.swift */; };
 		0CEC8D182BFE357100F152A0 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8D172BFE357100F152A0 /* TransactionView.swift */; };
 		0CEC8D1C2BFE358600F152A0 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8D1B2BFE358600F152A0 /* AccountView.swift */; };
-		0CEC8D1E2BFE359C00F152A0 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8D1D2BFE359C00F152A0 /* StatisticView.swift */; };
 		0CEC8D222BFE374300F152A0 /* AccountCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8D212BFE374300F152A0 /* AccountCellView.swift */; };
 		0CEC8D242BFE400F00F152A0 /* AddNewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8D232BFE400F00F152A0 /* AddNewAccountView.swift */; };
 		0CEC8D262BFE732B00F152A0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8D252BFE732B00F152A0 /* DateExtension.swift */; };
-		0CEC8D2A2BFE7DE300F152A0 /* PeriodSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8D292BFE7DE300F152A0 /* PeriodSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,19 +48,26 @@
 		0C43CE402BFE2B7000EFB207 /* IncomeExpenseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseCategory.swift; sourceTree = "<group>"; };
 		0C43CE442BFE2C8C00EFB207 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		0C43CE482BFE2D7700EFB207 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0C77EA932C1B50A5008D97D6 /* TransactionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellView.swift; sourceTree = "<group>"; };
 		0C7A3ADB2BFFB5A50015E72B /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		0C7A3ADD2BFFB80D0015E72B /* CategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
 		0C7A3ADF2BFFC1520015E72B /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
 		0C7A3AE12BFFC8B10015E72B /* EditCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryView.swift; sourceTree = "<group>"; };
 		0CD2227F2C09E48900A0CF0E /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		0CD222812C09EDA700A0CF0E /* AddNewTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTransactionView.swift; sourceTree = "<group>"; };
+		0CD222832C0A057A00A0CF0E /* DailyTransactiionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTransactiionView.swift; sourceTree = "<group>"; };
+		0CE3CD4C2C1B6F7A008D76E8 /* EditTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransactionView.swift; sourceTree = "<group>"; };
+		0CE3CD4F2C1B799F008D76E8 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		0CE3CD512C1B79BF008D76E8 /* CalendarTransactionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTransactionItemView.swift; sourceTree = "<group>"; };
+		0CE3CD532C1B7B46008D76E8 /* CalendarTransactionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTransactionCellView.swift; sourceTree = "<group>"; };
+		0CE3CD552C1B7BFB008D76E8 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		0CE3CD582C1B8CAC008D76E8 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
+		0CE3CD5A2C1B8E2B008D76E8 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		0CEC8D172BFE357100F152A0 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		0CEC8D1B2BFE358600F152A0 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		0CEC8D1D2BFE359C00F152A0 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		0CEC8D212BFE374300F152A0 /* AccountCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellView.swift; sourceTree = "<group>"; };
 		0CEC8D232BFE400F00F152A0 /* AddNewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAccountView.swift; sourceTree = "<group>"; };
 		0CEC8D252BFE732B00F152A0 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		0CEC8D292BFE7DE300F152A0 /* PeriodSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +126,8 @@
 				0C43CE402BFE2B7000EFB207 /* IncomeExpenseCategory.swift */,
 				0C43CE442BFE2C8C00EFB207 /* Account.swift */,
 				0C43CE482BFE2D7700EFB207 /* Category.swift */,
-				0CEC8D292BFE7DE300F152A0 /* PeriodSelector.swift */,
 				0CD2227F2C09E48900A0CF0E /* Month.swift */,
+				0CE3CD582C1B8CAC008D76E8 /* ChartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,13 +143,32 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		0CE3CD4E2C1B7963008D76E8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				0CE3CD4F2C1B799F008D76E8 /* CalendarView.swift */,
+				0CE3CD512C1B79BF008D76E8 /* CalendarTransactionItemView.swift */,
+				0CE3CD532C1B7B46008D76E8 /* CalendarTransactionCellView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		0CE3CD572C1B889B008D76E8 /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				0CE3CD5A2C1B8E2B008D76E8 /* StatisticView.swift */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
 		0CEC8D1F2BFE372200F152A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0CE3CD572C1B889B008D76E8 /* Statistic */,
+				0CE3CD4E2C1B7963008D76E8 /* Calendar */,
 				0C7A3AE32BFFCC1C0015E72B /* Category */,
 				0CEC8D282BFE769300F152A0 /* Transaction */,
 				0CEC8D202BFE373400F152A0 /* Account */,
-				0CEC8D1D2BFE359C00F152A0 /* StatisticView.swift */,
 				0C22F1A42BFBF0A5001CB8D9 /* AppTabView.swift */,
 			);
 			path = View;
@@ -155,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0CEC8D252BFE732B00F152A0 /* DateExtension.swift */,
+				0CE3CD552C1B7BFB008D76E8 /* ViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -164,6 +198,9 @@
 			children = (
 				0CEC8D172BFE357100F152A0 /* TransactionView.swift */,
 				0CD222812C09EDA700A0CF0E /* AddNewTransactionView.swift */,
+				0CD222832C0A057A00A0CF0E /* DailyTransactiionView.swift */,
+				0C77EA932C1B50A5008D97D6 /* TransactionCellView.swift */,
+				0CE3CD4C2C1B6F7A008D76E8 /* EditTransactionView.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -241,14 +278,21 @@
 				0CD222822C09EDA700A0CF0E /* AddNewTransactionView.swift in Sources */,
 				0CEC8D222BFE374300F152A0 /* AccountCellView.swift in Sources */,
 				0CEC8D262BFE732B00F152A0 /* DateExtension.swift in Sources */,
+				0CD222842C0A057A00A0CF0E /* DailyTransactiionView.swift in Sources */,
+				0CE3CD562C1B7BFB008D76E8 /* ViewExtension.swift in Sources */,
 				0CD222802C09E48900A0CF0E /* Month.swift in Sources */,
+				0CE3CD542C1B7B46008D76E8 /* CalendarTransactionCellView.swift in Sources */,
 				0C43CE492BFE2D7700EFB207 /* Category.swift in Sources */,
-				0CEC8D2A2BFE7DE300F152A0 /* PeriodSelector.swift in Sources */,
+				0CE3CD502C1B799F008D76E8 /* CalendarView.swift in Sources */,
 				0C7A3ADE2BFFB80D0015E72B /* CategoryCellView.swift in Sources */,
 				0C7A3AE02BFFC1520015E72B /* AddCategoryView.swift in Sources */,
-				0CEC8D1E2BFE359C00F152A0 /* StatisticView.swift in Sources */,
 				0C22F1A52BFBF0A5001CB8D9 /* AppTabView.swift in Sources */,
 				0C7A3ADC2BFFB5A50015E72B /* CategoriesView.swift in Sources */,
+				0C77EA942C1B50A5008D97D6 /* TransactionCellView.swift in Sources */,
+				0CE3CD4D2C1B6F7A008D76E8 /* EditTransactionView.swift in Sources */,
+				0CE3CD5B2C1B8E2B008D76E8 /* StatisticView.swift in Sources */,
+				0CE3CD592C1B8CAC008D76E8 /* ChartModel.swift in Sources */,
+				0CE3CD522C1B79BF008D76E8 /* CalendarTransactionItemView.swift in Sources */,
 				0C43CE412BFE2B7000EFB207 /* IncomeExpenseCategory.swift in Sources */,
 				0CEC8D242BFE400F00F152A0 /* AddNewAccountView.swift in Sources */,
 				0C22F1942BFBEE26001CB8D9 /* Application.swift in Sources */,
